@@ -1,10 +1,10 @@
 body {
-    background-color: beige;
+    background-color: rgb(189, 189, 189);    
     margin: 0 auto;
 }
 
 #pokeball-container {
-    height: 500px;
+    height: 550px;
     width: 100%;
     margin: 0 auto;
     background-color: rgb(45, 99, 99);
@@ -80,22 +80,26 @@ body {
     z-index: 1;
 }
 
-/* LUGIA CSS */
+/* ----- LUGIA CSS ----- */
+
 
 #lugia-container {
-    height: 500px;
+    height: 550px;
     width: 100%;
     margin: 0 auto;
-    /* background-color: rgb(27, 23, 27); */
+    /* background-color: rgb(37, 37, 37); */
     background-color: rgb(189, 189, 189);
     position: relative;
+    --main-color: rgb(27, 30, 54);
+    --main-shadow-color: #2b2b4d;
+    --secondary-color: rgb(121, 164, 221);
 }
 
 .lugia-head {
     width: 180px;
     height: 180px;
-    background-color: rgb(27, 30, 54);
-    position: absolute;
+    background-color: var(--main-color);
+    position: relative;
     top: 100px;
     left: 0;
     right: 0;
@@ -106,7 +110,7 @@ body {
     border-bottom-left-radius: 100%;
     border-top-right-radius: 20%;
     transform: rotate(-45deg);
-    box-shadow: inset 1em 0em #262645;
+    box-shadow: inset 1em 0em var(--main-shadow-color);
     z-index: 1;
 }
 
@@ -120,7 +124,7 @@ body {
     left: 100px;
     border-left: 120px solid transparent;
     border-right: 125px solid transparent;
-    border-bottom: 50px solid lightblue;
+    border-bottom: 50px solid var(--secondary-color);
     border-bottom-left-radius: 100%;
     transform: rotate(-50deg);
 }
@@ -131,7 +135,7 @@ body {
     left: -32px;
     border-right: 120px solid transparent;
     border-left: 125px solid transparent;
-    border-bottom: 50px solid lightblue;
+    border-bottom: 50px solid var(--secondary-color);
     border-bottom-right-radius: 100%;
     transform: rotate(50deg);
     /* transform: scaleY(-1); */
@@ -186,9 +190,9 @@ body {
 .lugia-body {
     width: 200px;
     height: 200px;
-    background-color: lightblue;
+    background-color: var(--secondary-color);
     position: relative;
-    top: 220px;
+    top: 75px;
     left: 0;
     right: 0;
     bottom: 0;
@@ -222,10 +226,9 @@ body {
 .lugia-feet-container {
     width: 275px;
     height: 100px;
-    /* border: solid 1px white;  */
     position: relative;
     margin: 0 auto;
-    top: 130px;
+    top: -5px;
     left: 0px;
     right: 0px;
 }
@@ -271,4 +274,142 @@ body {
     border-radius: 100% 80% 50% 50%;
     overflow: visible;
     box-shadow: inset -12px -1px #262645;
+}
+
+
+.right-wing {
+    width: 300px;
+    height: 150px;
+    /* background-color: orange; */
+    background-color: var(--main-color);
+    position: relative;
+    right: -149px;
+    top: 113px;
+    transform: rotate(13deg);
+    border-radius: 20% 20% 20% 100%;
+    z-index: -1;
+}
+
+.right-feather-1 {
+    width: 80px;
+    height: 40px;
+    background-color: var(--main-color);
+    position: absolute;
+    right: -45px;
+    top: -12px;
+    transform: rotate(340deg);
+    border-radius: 20% 20% 80% 100%;
+}
+
+.right-feather-2 {
+    width: 80px;
+    height: 40px;
+    background-color: var(--main-color);
+    position: absolute;
+    right: -52px;
+    top: 30px;
+    transform: rotate(360deg);
+    border-radius: 20% 20% 80% 100%;
+}
+
+.right-feather-3 {
+    width: 80px;
+    height: 40px;
+    background-color: var(--main-color);
+    position: absolute;
+    right: -53px;
+    top: 72px;
+    transform: rotate(8deg);
+    border-radius: 20% 20% 80% 100%;
+}
+
+.right-feather-4 {
+    width: 80px;
+    height: 40px;
+    background-color: var(--main-color);
+    position: absolute;
+    right: -39px;
+    top: 112px;
+    transform: rotate(16deg);
+    border-radius: 20% 20% 80% 100%;
+}
+
+.right-feather-5 {
+    width: 80px;
+    height: 50px;
+    background-color: var(--main-color);
+    position: absolute;
+    right: 72px;
+    top: 21px;
+    transform: rotate(360deg);
+    border-radius: 20% 20% 80% 100%;
+    box-shadow: inset -7px 7px var(--main-shadow-color);
+}
+
+.left-wing {
+    width: 300px;
+    height: 150px;
+    background-color: var(--main-color);
+    position: relative;
+    top: -319px;
+    left: -145px;
+    transform: rotate(73deg);
+    border-radius: 20% 20% 100% 20%;
+    z-index: -1;
+}
+
+.left-feather-1 {
+    width: 80px;
+    height: 40px;
+    background-color: var(--main-color);
+    position: absolute;
+    left: -45px;
+    top: -12px;
+    transform: rotate(20deg);
+    border-radius: 20% 20% 100% 80%;
+}
+
+.left-feather-2 {
+    width: 80px;
+    height: 40px;
+    background-color: var(--main-color);
+    position: absolute;
+    left: -52px;
+    top: 30px;
+    transform: rotate(0deg);
+    border-radius: 20% 20% 100% 80%;
+}
+
+.left-feather-3 {
+    width: 80px;
+    height: 40px;
+    background-color: var(--main-color);
+    position: absolute;
+    left: -52px;
+    top: 72px;
+    transform: rotate(352deg);
+    border-radius: 20% 20% 100% 80%;
+}
+
+.left-feather-4 {
+    width: 80px;
+    height: 40px;
+    background-color: var(--main-color);
+    position: absolute;
+    left: -39px;
+    top: 112px;
+    transform: rotate(344deg);
+    border-radius: 20% 20% 100% 80%;
+}
+
+.left-feather-5 {
+    width: 80px;
+    height: 50px;
+    background-color: var(--main-color);
+    position: absolute;
+    left: 72px;
+    top: 21px;
+    transform: rotate(360deg);
+    border-radius: 20% 20% 100% 80%;
+    box-shadow: inset 7px 7px var(--main-shadow-color);
 }
